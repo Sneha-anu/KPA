@@ -1,0 +1,710 @@
+{
+  "profile": [
+    {
+      "id": 51827270,
+      "name": "Dinesh S",
+      "contact": "9952600920",
+      "mail": "dinesh.1@hcl.com",
+      "manager": 51474893,
+      "designation": "TL",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [
+        {
+          "type": "component",
+          "title": "Dynamic Question App in React",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2019-12-11T14:44:30",
+          "modified_on": "2019-12-11T14:44:30"
+        },
+        {
+          "type": "component",
+          "title": "Pagination in React",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2019-12-12T14:44:30",
+          "modified_on": "2019-12-12T14:44:30"
+        },
+        {
+          "type": "Master_class",
+          "title": "Redux core concepts",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "5",
+          "created_on": "2020-02-25T14:44:30",
+          "modified_on": "2020-02-25T14:44:30"
+        },
+        {
+          "type": "Tech_session",
+          "title": "Redux core concepts",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-02-28T14:44:30",
+          "modified_on": "2020-02-28T14:44:30"
+        },
+        {
+          "type": "case_study",
+          "title": "RXJS Operator",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "2",
+          "created_on": "2019-10-06T14:44:30",
+          "modified_on": "2019-10-06T14:44:30"
+        }
+      ],
+      "project_details": {
+        "name": "KLA",
+        "project_manager": "Navis",
+        "mail": "navis@hcl.com",
+        "contact": "9952600921"
+      },
+      "reporting_manager": {
+        "valid": true,
+        "reportee": [51827190, 51827142]
+      }
+    },
+    {
+      "id": 51748798,
+      "name": "Divya R",
+      "contact": "9003214154",
+      "mail": "r_divya@hcl.com",
+      "manager": 51474893,
+      "designation": "TL",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [
+        {
+          "type": "component",
+          "title": "Offline Notification in Angular",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2019-11-29T14:44:30",
+          "modified_on": "2019-11-29T14:44:30"
+        },
+        {
+          "type": "Master_class",
+          "title": "Advanced Routing",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-02-27T14:44:30",
+          "modified_on": "2020-02-27T14:44:30"
+        },
+        {
+          "type": "Tech_session",
+          "title": "Advanced Routing",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-03-16T14:44:30",
+          "modified_on": "2020-03-16T14:44:30"
+        }
+      ],
+      "project_details": {
+        "name": "Medtronic",
+        "project_manager": "Senthil",
+        "mail": "senthil_1@hcl.com",
+        "contact": "9952200921"
+      },
+      "reporting_manager": {
+        "valid": true,
+        "reportee": [51827190, 51827142]
+      }
+    },
+    {
+      "id": 51474893,
+      "name": "Johnson A",
+      "contact": "9790900974",
+      "mail": "johnsona@hcl.com",
+      "manager": 51235193,
+      "designation": "TM",
+      "group_id": 1,
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [
+        {
+          "type": "component",
+          "title": "Dynamic Question App in React",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2019-12-11T14:44:30",
+          "modified_on": "2019-12-11T14:44:30"
+        },
+        {
+          "type": "Master_class",
+          "title": "RXJS",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "5",
+          "created_on": "2019-12-05T14:44:30",
+          "modified_on": "2019-12-05T14:44:30"
+        },
+        {
+          "type": "Tech_session",
+          "title": "RXJS",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "5",
+          "created_on": "2020-02-18T14:44:30",
+          "modified_on": "2020-02-18T14:44:30"
+        },
+        {
+          "type": "case_study",
+          "title": "RXJS Operator",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "2",
+          "created_on": "2020-03-16T14:44:30",
+          "modified_on": "2020-03-16T14:44:30"
+        }
+      ],
+      "project_details": {
+        "name": "Medtronic",
+        "project_manager": "Senthil",
+        "mail": "senthil_1@hcl.com",
+        "contact": "8552600921"
+      },
+      "reporting_manager": {
+        "valid": true,
+        "reportee": [51823350, 51827270]
+      }
+    },
+    {
+      "id": 51823350,
+      "name": "Manoj Mehar Gupta Voonna",
+      "contact": "8925301723",
+      "mail": "manojmehargup.voonn@hcl.com",
+      "manager": 51474893,
+      "designation": "TE",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [
+        {
+          "type": "component",
+          "title": "Offline Notification in Angular",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2019-11-29T14:44:30",
+          "modified_on": "2019-11-29T14:44:30"
+        },
+        {
+          "type": "Master_class",
+          "title": "Angular Forms",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "5",
+          "created_on": "2020-03-16T14:44:30",
+          "modified_on": "2020-03-16T14:44:30"
+        },
+        {
+          "type": "Tech_session",
+          "title": "Angular Forms",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-03-26T14:44:30",
+          "modified_on": "2020-02-26T14:44:30"
+        }
+      ],
+      "project_details": {
+        "name": "Medtronic",
+        "project_manager": "Senthil",
+        "mail": "senthil_1@hcl.com",
+        "contact": "9952200921"
+      },
+      "reporting_manager": {
+        "valid": false
+      }
+    },
+    {
+      "id": 51744621,
+      "name": "Prakalathan B",
+      "contact": "9789787173",
+      "mail": "prakalathan.b@hcl.com",
+      "manager": 51474893,
+      "designation": "TL",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [],
+      "project_details": {
+        "name": "WLC - Rakuten",
+        "project_manager": "Elavazhagan T",
+        "mail": "elavazhagant@hcl.com",
+        "contact": "9884075758"
+      },
+      "reporting_manager": {
+        "valid": true,
+        "reportee": [51827190, 51827142]
+      }
+    },
+    {
+      "id": 51640296,
+      "name": "Ramachandiran R",
+      "contact": "9790283647",
+      "mail": "ramachandiranr@hcl.com",
+      "manager": 51474893,
+      "designation": "TE",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [],
+      "project_details": {
+        "name": "Panasonic HMC",
+        "project_manager": "Senthilnathan Murhty",
+        "mail": "senthilnathan.murht@hcl.com",
+        "contact": "9790969676"
+      },
+      "reporting_manager": {
+        "valid": false
+      }
+    },
+    {
+      "id": 51827281,
+      "name": "Saradha Sekar",
+      "contact": "8015531044",
+      "mail": "saradha.sekar@hcl.com",
+      "manager": 51474893,
+      "designation": "TE",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [],
+      "project_details": {
+        "name": "Boeing",
+        "project_manager": "Senthilnathan Murhty",
+        "mail": "senthilnathan.murht@hcl.com",
+        "contact": "9790969676"
+      },
+      "reporting_manager": {
+        "valid": false
+      }
+    },
+    {
+      "id": 51824845,
+      "name": "Suruthi Muniraj",
+      "contact": "9500532940",
+      "mail": "suruthi.muniraj@hcl.com",
+      "manager": 51474893,
+      "designation": "TE",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [],
+      "project_details": {
+        "name": "Boeing",
+        "project_manager": "Senthilnathan Murhty",
+        "mail": "senthilnathan.murht@hcl.com",
+        "contact": "9790969676"
+      },
+      "reporting_manager": {
+        "valid": false
+      }
+    },
+    {
+      "id": 51829845,
+      "name": "Sneha Madhu",
+      "contact": "8056377044",
+      "mail": "sneha.madhu@hcl.com",
+      "manager": 51474893,
+      "designation": "TE",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [
+        {
+          "type": "component",
+          "title": "Angular Grid With Chart library",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2019-09-19T14:44:30",
+          "modified_on": "2019-09-19T14:44:30"
+        },
+        {
+          "type": "Master_class",
+          "title": "Location Strategy",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-01-12T14:44:30",
+          "modified_on": "2020-01-12T14:44:30"
+        },
+        {
+          "type": "Tech_session",
+          "title": "Location Strategy",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-03-07T14:44:30",
+          "modified_on": "2020-03-07T14:44:30"
+        },
+        {
+          "type": "case_study",
+          "title": "Location Strategy,ng-content",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "2",
+          "created_on": "2019-11-13T14:44:30",
+          "modified_on": "2019-11-13T14:44:30"
+        }
+      ],
+      "project_details": {
+        "name": "Boeing",
+        "project_manager": "Senthilnathan Murhty",
+        "mail": "senthilnathan.murht@hcl.com",
+        "contact": "9790969676"
+      },
+      "reporting_manager": {
+        "valid": false
+      }
+    },
+    {
+      "id": 51733625,
+      "name": "Sucindran M",
+      "contact": "9962242531",
+      "mail": "sucindran.m@hcl.com",
+      "manager": 51474893,
+      "designation": "TL",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [
+        {
+          "type": "component",
+          "title": "Sending Email using Angular with Node JS",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2019-10-05T14:44:30",
+          "modified_on": "2019-10-05T14:44:30"
+        },
+        {
+          "type": "Master_class",
+          "title": "Angular Forms",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "5",
+          "created_on": "2020-03-16T14:44:30",
+          "modified_on": "2020-03-16T14:44:30"
+        },
+        {
+          "type": "Tech_session",
+          "title": "Angular Forms",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-03-26T14:44:30",
+          "modified_on": "2020-03-26T14:44:30"
+        },
+        {
+          "type": "case_study",
+          "title": "Event Capturing",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "2",
+          "created_on": "2019-12-02T14:44:30",
+          "modified_on": "2019-12-02T14:44:30"
+        }
+      ],
+      "project_details": {
+        "name": "Boeing",
+        "project_manager": "Navis",
+        "mail": "navis@hcl.com",
+        "contact": "9952600921"
+      },
+      "reporting_manager": {
+        "valid": true,
+        "reportee": [51827190, 51827142]
+      }
+    },
+    {
+      "id": 51835314,
+      "name": "Meenakshi M",
+      "contact": "9500049881",
+      "mail": "muthumeenakshi.palan@hcl.com",
+      "manager": 51474893,
+      "designation": "TL",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [
+        {
+          "type": "component",
+          "title": "Angular Grid With Chart library",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2019-09-19T14:44:30",
+          "modified_on": "2019-09-19T14:44:30"
+        },
+        {
+          "type": "Master_class",
+          "title": "Library Creation",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-03-04T14:44:30",
+          "modified_on": "2020-03-04T14:44:30"
+        },
+        {
+          "type": "Tech_session",
+          "title": "Library Creation",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "1",
+          "created_on": "2020-03-22T14:44:30",
+          "modified_on": "2020-03-22T14:44:30"
+        }
+      ],
+      "project_details": {
+        "name": "Suntec",
+        "project_manager": "Upaindur",
+        "mail": "upaindurb@hcl.com",
+        "contact": "9873470252"
+      },
+      "reporting_manager": {
+        "valid": true,
+        "reportee": [51827190, 51827142]
+      }
+    },
+    {
+      "id": 51784758,
+      "name": "Vishveshwaran S",
+      "contact": "9626513506",
+      "mail": "vishveshwarans@hcl.com",
+      "manager": 51474893,
+      "designation": "TL",
+      "target_kpa": {
+        "component": 5,
+        "Master_class": 2,
+        "Tech_session": 2,
+        "case_study": 4
+      },
+      "kpa": [
+        {
+          "type": "component",
+          "title": "Dynamic CRUD based Table from JSON",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "4",
+          "created_on": "2020-01-18T14:44:30",
+          "modified_on": "2020-01-18T14:44:30"
+        },
+        {
+          "type": "case_study",
+          "title": "Resizable table",
+          "description": "With supporting text below as a natural lead-in to additional content.",
+          "stage": "2",
+          "created_on": "2019-08-09T14:44:30",
+          "modified_on": "2019-08-09T14:44:30"
+        }
+      ],
+      "project_details": {
+        "name": "Boeing",
+        "project_manager": "Senthilnathan Murhty",
+        "mail": "senthilnathan.murht@hcl.com",
+        "contact": "9790969676"
+      },
+      "reporting_manager": {
+        "valid": true,
+        "reportee": [51827190, 51827142]
+      }
+    }
+  ],
+  "kpaCreation": [
+    {
+      "name": "component",
+      "description": "With supporting text below as a natural lead-in to additional content.",
+      "stage": [
+        {
+          "title": "Proposal",
+          "id": "1"
+        },
+        {
+          "title": "Development",
+          "id": "2"
+        },
+        {
+          "title": "Verification",
+          "id": "3"
+        },
+        {
+          "title": "Upload(GIT)",
+          "id": "4"
+        }
+      ],
+      "target": [
+        {
+          "role": "SE",
+          "label": "Software Engineer",
+          "target": "2"
+        },
+        {
+          "role": "LE",
+          "label": "Lead Engineer",
+          "target": "2"
+        },
+        {
+          "role": "TL",
+          "label": "Technical Lead",
+          "target": "3"
+        },
+        {
+          "role": "TM",
+          "label": "Technical Manager",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "name": "Tech_session",
+      "description": "With supporting text below as a natural lead-in to additional content.",
+      "stage": [
+        {
+          "title": "Topic overview",
+          "id": "1"
+        },
+        {
+          "title": "Content preparation",
+          "id": "2"
+        },
+        {
+          "title": "Review",
+          "id": "3"
+        },
+        {
+          "title": "Online session scheduled",
+          "id": "4"
+        }
+      ],
+      "target": [
+        {
+          "role": "SE",
+          "label": "Software Engineer",
+          "target": "1"
+        },
+        {
+          "role": "LE",
+          "label": "Lead Engineer",
+          "target": "1"
+        },
+        {
+          "role": "TL",
+          "label": "Technical Lead",
+          "target": "2"
+        },
+        {
+          "role": "TM",
+          "label": "Technical Manager",
+          "target": "2"
+        }
+      ]
+    },
+    {
+      "name": "Master_class",
+      "description": "With supporting text below as a natural lead-in to additional content.",
+      "stage": [
+        {
+          "title": "Topic overview",
+          "id": "1"
+        },
+        {
+          "title": "Content preparation",
+          "id": "2"
+        },
+        {
+          "title": "Review",
+          "id": "3"
+        },
+        {
+          "title": "Classroom session scheduled",
+          "id": "4"
+        }
+      ],
+      "target": [
+        {
+          "role": "SE",
+          "label": "Software Engineer",
+          "target": "0"
+        },
+        {
+          "role": "LE",
+          "label": "Lead Engineer",
+          "target": "1"
+        },
+        {
+          "role": "TL",
+          "label": "Technical Lead",
+          "target": "2"
+        },
+        {
+          "role": "TM",
+          "label": "Technical Manager",
+          "target": "2"
+        }
+      ]
+    },
+    {
+      "name": "case_study",
+      "description": "With supporting text below as a natural lead-in to additional content.",
+      "stage": [
+        {
+          "title": "Solution identifies",
+          "id": "1"
+        },
+        {
+          "title": "Documentation",
+          "id": "2"
+        },
+        {
+          "title": "Review",
+          "id": "3"
+        },
+        {
+          "title": "Approval",
+          "id": "4"
+        }
+      ],
+      "target": [
+        {
+          "role": "SE",
+          "label": "Software Engineer",
+          "target": "2"
+        },
+        {
+          "role": "LE",
+          "label": "Lead Engineer",
+          "target": "2"
+        },
+        {
+          "role": "TL",
+          "label": "Technical Lead",
+          "target": "3"
+        },
+        {
+          "role": "TM",
+          "label": "Technical Manager",
+          "target": "3"
+        }
+      ]
+    }
+  ]
+}
