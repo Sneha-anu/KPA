@@ -253,6 +253,7 @@ const Dashboard = (props) => {
           <KpaForm
             profileSubmit={profileSubmit}
             name={isEmpty(titleKpa) ? "" : titleKpa.value}
+            handleClose={handleClose}
           />
         </CustomModel>
       )}

@@ -216,6 +216,7 @@ const Profile = (props) => {
         <AddProfile
           profileSubmit={profileSubmit}
           kpaCreation={props.kpaCreation}
+          handleClose={handleClose}
         />
       </CustomModel>
     </React.Fragment>
