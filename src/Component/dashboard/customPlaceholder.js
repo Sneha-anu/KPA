@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BarChart from "@material-ui/icons/BarChart";
+import PieChartIcon from "@material-ui/icons/PieChart";
+import TimelineIcon from "@material-ui/icons/Timeline";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
@@ -48,12 +50,23 @@ const useStyles = makeStyles((theme) => ({
 
 const CustomPlaceholder = (props) => {
   const classes = useStyles();
-
+  const getIconLogo = () => {
+    switch (props.id) {
+      case "bar":
+        return <BarChart className={classes.whitecolor} />;
+      case "line":
+        return <TimelineIcon className={classes.whitecolor} />;
+      case "pie":
+        return <PieChartIcon className={classes.whitecolor} />;
+      default:
+        return <BarChart className={classes.whitecolor} />;
+    }
+  };
   return (
     <Box className={classes.wholeContainer}>
       <Box>
         <Box component="div" display="inline" className={classes.topbox}>
-          <BarChart className={classes.whitecolor} />
+          {getIconLogo()}
         </Box>
         <Typography className={classes.containertitle} display="inline">
           {props.label}

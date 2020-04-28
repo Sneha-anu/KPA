@@ -45,6 +45,10 @@ const Dashboard = (props) => {
     setshowBy({
       [name]: event.target.value,
     });
+    // history.push({
+    //     pathname: "/kpa-profile",
+    //     search: `?${id}=${event.target.value}`
+    //   });
   };
 
   async function changeStage(result) {

@@ -67,12 +67,12 @@ const useStyles = makeStyles((theme) => ({
     background: "#fff",
   },
   errColor: {
-    backgroundColor: '#f2dede',
+    backgroundColor: "#f2dede",
   },
   addEmpBtn: {
-    marginTop:'5px',
-    marginRight:'5px'
-  }
+    marginTop: "5px",
+    marginRight: "5px",
+  },
 }));
 
 const Profile = (props) => {
@@ -183,7 +183,8 @@ const Profile = (props) => {
 
           <div>
             <Button
-              variant="outlinedPrimary" className={classes.addEmpBtn}
+              variant="outlinedPrimary"
+              className={classes.addEmpBtn}
               onClick={() => setOpen(true)}
               endIcon={<LibraryAddIcon />}
             >

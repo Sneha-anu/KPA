@@ -79,7 +79,7 @@ export default function Dashboard() {
         <Grid item xs={4}>
           <CustomPlaceholder
             id="bar"
-            label="Completed vs Pending"
+            label="Break Down"
             {...options}
             handleChange={handleChange}
           >
@@ -93,11 +93,7 @@ export default function Dashboard() {
           </CustomPlaceholder>
         </Grid>
         <Grid item xs={4}>
-          <CustomPlaceholder
-            id="line"
-            label="Completed vs Pending"
-            {...options}
-          >
+          <CustomPlaceholder id="line" label="Latter Lines" {...options}>
             <CustomLineCharts
               data={lineGraphData(data.profile, "component", data.kpaCreation)}
             />
@@ -107,7 +103,7 @@ export default function Dashboard() {
           </CustomPlaceholder>
         </Grid>
         <Grid item xs={4}>
-          <CustomPlaceholder id="pie" label="Completed vs Pending" {...options}>
+          <CustomPlaceholder id="pie" label="Overall Progress" {...options}>
             <CustomPieCharts
               data={pieChartsData(data.profile, "component", data.kpaCreation)}
             />
