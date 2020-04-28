@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://kpa-backend.herokuapp.com/";
+axios.defaults.baseURL = "https://kpa-backend.herokuapp.com";
 
 export function fetchUserProfile() {
   return axios.get("/user");
