@@ -243,10 +243,7 @@ const FormData = (props) => {
         >
           Submit
         </Button>
-        <Button variant="contained" color="primary">
-          Add KPA
-        </Button>
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" color="secondary" onClick={props.handleClose}>
           Cancel
         </Button>
       </Box>
