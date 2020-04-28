@@ -63,7 +63,7 @@ const NavBar = () => {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
           <Typography variant="h6" mr={2}>
-            <Timeline className={classes.whitecolor} fontSize="large"/> KPA Tracker
+            <img src="%PUBLIC_URL%/logo.svg" /> KPA Tracker
           </Typography>
           <Tabs value={value} onChange={handleChange}>
             <Tab label="Dashboard" component={Link} to="/" id="dashboard"  className={classes.navTab}/>

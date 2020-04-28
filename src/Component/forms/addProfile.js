@@ -110,7 +110,7 @@ const FormData = (props) => {
     }
     // console.log(target, "Target", result);
     axios
-      .post("http://localhost:4100/user", result)
+      .post("https://kpa-backend.herokuapp.com/user", result)
       .then((res) => {
         props.profileSubmit(result);
       })

@@ -31,7 +31,7 @@ const NotifyCard = (props) => {
 
   const profileSubmit = async (arg) => {
     Axios.put(
-      `http://localhost:4100/kpa/${props.id}?kpaId=${props._id}`,
+      `https://kpa-backend.herokuapp.com/kpa/${props.id}?kpaId=${props._id}`,
       arg
     ).then((res) => {
       window.location.reload();
@@ -41,7 +41,7 @@ const NotifyCard = (props) => {
 
   const handleDelete = () => {
     Axios.delete(
-      `http://localhost:4100/kpa/${props.id}?kpaId=${props._id}`
+      `https://kpa-backend.herokuapp.com/kpa/${props.id}?kpaId=${props._id}`
     ).then((res) => {
       window.location.reload();
       handleClose();

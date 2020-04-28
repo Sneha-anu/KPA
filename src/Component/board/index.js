@@ -83,7 +83,7 @@ const Dashboard = (props) => {
     console.log(changeArr, "Casdfa dsg");
     try {
       const res = await Axios.put(
-        `http://localhost:4100/kpa/${changeArr.empId}?kpaId=${changeArr._id}`,
+        `https://kpa-backend.herokuapp.com/kpa/${changeArr.empId}?kpaId=${changeArr._id}`,
         changeArr
       );
       // setData((previous) => {
@@ -153,7 +153,7 @@ const Dashboard = (props) => {
     console.log(arg);
     const id = isEmpty(titleKpa) ? "" : titleKpa.id;
     try {
-      const res = await Axios.post(`http://localhost:4100/kpa/${id}`, arg);
+      const res = await Axios.post(`https://kpa-backend.herokuapp.com/kpa/${id}`, arg);
       setOpen(false);
       fetchData();
       snackBarRef.current.handleClick(
