@@ -90,6 +90,11 @@ const Profile = (props) => {
     props.profileSubmit();
   };
 
+  const getAvatarname = (fullName) => {
+    const arrayOfName = fullName.split(" ");
+    return (arrayOfName[0].split("")[0] + arrayOfName[arrayOfName.length -1].split("")[0]);
+  }
+
   const renderList = () => {
     // const data = props.data;
     if (props.loading) {
@@ -126,7 +131,7 @@ const Profile = (props) => {
             <TableCell component="th" scope="row">
               <Box display="flex" alignItems="center" flexDirection="row">
                 <Box>
-                  <Avatar className={classes.avatar}>RR</Avatar>
+                  <Avatar className={classes.avatar}>{getAvatarname(profile.name)}</Avatar>
                 {/*  <Avatar
                     alt={profile.name}
                     src={"/images/" + profile.name + ".jpg"}
