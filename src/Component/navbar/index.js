@@ -5,7 +5,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from '@material-ui/core/Toolbar';
 import { blue } from '@material-ui/core/colors';
 import Typography from '@material-ui/core/Typography';
-import Timeline from '@material-ui/icons/Timeline';
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import queryString from "query-string";
@@ -32,12 +31,10 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-  whitecolor: {
-    color: '#fff',
-    width: '30px',
-    height: '30px',
-    margin: '4px 4px -10px',
+  img: {
+    height: '40px',
     textAlign: 'center',
+    marginRight: '5px',
     lineHeight: '33px',
   },
   gridcontent: {
@@ -66,8 +63,9 @@ const NavBar = () => {
     <div>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
+        <img className={classes.img} src="/kpa-icon.jpg" alt="KPA Tracker" />
           <Typography variant="h6" mr={2}>
-          <Timeline className={classes.whitecolor} fontSize="large"/> KPA Tracker
+           KPA Tracker
           </Typography>
           <Tabs value={value} onChange={handleChange}>
             <Tab label="Dashboard" component={Link} to="/" id="dashboard"  className={classes.navTab}/>

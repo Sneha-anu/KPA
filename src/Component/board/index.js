@@ -198,7 +198,7 @@ const Dashboard = (props) => {
         // bgcolor="background.paper"
       >
         <Typography variant="h6" component="h6">
-          {isEmpty(titleKpa) ? "" : titleKpa.value} KPA Board
+          {isEmpty(titleKpa) ? "" : startCase(camelCase(titleKpa.value))} KPA Board
         </Typography>
         <div>
           {queryParam["type"] === "name" && (
