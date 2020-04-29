@@ -10,6 +10,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import queryString from "query-string";
 import {isEmpty} from 'lodash';
+import { useLocation } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -52,10 +53,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const NavBar = (props) => {
-  const { location } = props;
+const NavBar = () => {
+  const location = useLocation();
   const queryParam = queryString.parse(location.search);
-  const [value, setValue] = React.useState(isEmpty(queryParam)? 0: 1);
+  const [value, setValue] = React.useState(isEmpty(queryParam) ? 0: 1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -66,7 +67,7 @@ const NavBar = (props) => {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
           <Typography variant="h6" mr={2}>
-            <img src="%PUBLIC_URL%/logo.svg" /> KPA Tracker
+          <Timeline className={classes.whitecolor} fontSize="large"/> KPA Tracker
           </Typography>
           <Tabs value={value} onChange={handleChange}>
             <Tab label="Dashboard" component={Link} to="/" id="dashboard"  className={classes.navTab}/>

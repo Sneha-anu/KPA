@@ -10,7 +10,7 @@ import { FilterBYType, FilterByName } from "../../Shared/function";
 import RowList from "./rowList";
 import SnackBar from "../../Shared/component/snackBar";
 import LibraryAddIcon from "@material-ui/icons/LibraryAdd";
-
+import { useHistory } from "react-router-dom";
 // import TitleHeaders from "./titleBoard";
 import { FormLabel, Typography } from "@material-ui/core";
 import { fetchUsersWithKpa } from "../../service/apiService";
@@ -45,9 +45,9 @@ const Dashboard = (props) => {
     setshowBy({
       [name]: event.target.value,
     });
-    history.push({
+    props.history.push({
         pathname: "/kpa-profile",
-        search: `?${type}=${queryParam["type"]}&&${value}=${event.target.value}`
+        search: `?${"type"}=${queryParam["type"]}&&${"value"}=${event.target.value}`
       });
   };
 
