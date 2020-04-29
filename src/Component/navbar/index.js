@@ -8,7 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Timeline from '@material-ui/icons/Timeline';
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-
+import queryString from "query-string";
+import {isEmpty} from 'lodash';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,8 +52,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const NavBar = () => {
-  const [value, setValue] = React.useState(0);
+const NavBar = (props) => {
+  const { location } = props;
+  const queryParam = queryString.parse(location.search);
+  const [value, setValue] = React.useState(isEmpty(queryParam)? 0: 1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

@@ -45,25 +45,15 @@ const Dashboard = (props) => {
     setshowBy({
       [name]: event.target.value,
     });
-    // history.push({
-    //     pathname: "/kpa-profile",
-    //     search: `?${id}=${event.target.value}`
-    //   });
+    history.push({
+        pathname: "/kpa-profile",
+        search: `?${type}=${queryParam["type"]}&&${value}=${event.target.value}`
+      });
   };
 
   async function changeStage(result) {
     setIsLoading(true);
     const event = result["draggableId"].split("~");
-    // const changeArr = data
-    //   .filter((el) => el.empId === event[0])
-    //   .map((user) => {
-    //     return user.kpa.map((list) => {
-    //       return list.type === event[2] && list.title === event[1]
-    //         ? { ...list, stage: result.destination.droppableId }
-    //         : list;
-    //     });
-    //   })
-    //   .flat();
     let changeArr = {};
     data.profile
       .filter((el) => el.empId === event[0])
@@ -86,11 +76,6 @@ const Dashboard = (props) => {
         `https://kpa-backend.herokuapp.com/kpa/${changeArr.empId}?kpaId=${changeArr._id}`,
         changeArr
       );
-      // setData((previous) => {
-      //   return previous.map((el) =>
-      //     el.id === parseInt(event[0]) ? res.data : el
-      //   );
-      // });
       window.location.reload();
       snackBarRef.current.handleClick(
         `Profile ${event[0]} updated Successfully`,

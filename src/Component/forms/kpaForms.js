@@ -138,7 +138,7 @@ const KpaForm = (props) => {
             select
             name="stage"
             value={formData.stage.value}
-            label="Kpa Type"
+            label="Kpa Stage"
             onChange={handleChange}
             InputLabelProps={{ shrink: true }}
             variant="outlined"
