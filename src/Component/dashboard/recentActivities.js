@@ -15,6 +15,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { red, blue, green } from "@material-ui/core/colors";
 import Detail from "./profileDetail";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
+import { upperCase, camelCase } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -101,7 +102,7 @@ const RecentActivities = (props) => {
                 display="block"
                 fontWeight="fontWeightLight"
               >
-                Master Class
+                {upperCase(camelCase(recentKPA.type))}
               </Typography>
               <Typography className={classes.sidebarTitle} gutterBottom>
                 {recentKPA.title}

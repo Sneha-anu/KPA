@@ -9,7 +9,9 @@ import Box from "@material-ui/core/Box";
 import { blue } from "@material-ui/core/colors";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
+import { startCase, camelCase } from "lodash";
 import Select from "@material-ui/core/Select";
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(3),
@@ -85,7 +87,7 @@ const CustomPlaceholder = (props) => {
               >
                 {props.choice.map((el) => (
                   <MenuItem key={el.id} value={el.id}>
-                    {el.value}
+                    {startCase(camelCase(el.value))}
                   </MenuItem>
                 ))}
               </Select>

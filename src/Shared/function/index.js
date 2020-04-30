@@ -10,6 +10,7 @@ export const getGroupingKpa = (arr) => {
           id: el.empId,
           name: el.name,
           designation: el.designation,
+          target: el.target_kpa
         }; //   /Object.assign({}, item, { id: el.id })
       });
     })
@@ -162,9 +163,11 @@ export const barGraphData = (arr, type, kpa = []) => {
   if (arr.length === 0 || type === "") {
     return [];
   }
-
+  
   var filteredArr = getGroupingKpa(arr).filter((el) => el.type === type);
+
   var groupArr = groupBy(filteredArr, "name");
+
   var lastStage = find(kpa, ["name", type]).stage.length.toString() || "";
   var res = [];
 
@@ -177,6 +180,7 @@ export const barGraphData = (arr, type, kpa = []) => {
       name: id,
       completed: completed,
       pending: pending,
+      target: groupArr[id][0].target[groupArr[id][0].type],
       id: groupArr[id][0]["id"],
     });
   }
@@ -184,27 +188,12 @@ export const barGraphData = (arr, type, kpa = []) => {
     return {
       ...el,
       completed: el.completed.length,
-      pending: 5 - el.completed.length,
+      pending: el.target - el.completed.length,
     };
   });
 
   return orderBy(res, ["completed"], ["desc"]).filter((_, idx) => idx < 4);
 };
-
-// export const barGraphData = (arr, type, kpa = []) => {
-//   if (arr.length === 0) {
-//     return [];
-//   }
-//   const data = fetchGroupKPAByType(arr, type, kpa).map((el) => {
-//     return {
-//       ...el,
-//       completed: el.completed.length,
-//       pending: 5 - el.completed.length,
-//     };
-//   });
-
-//   return orderBy(data, ["completed"], ["desc"]).filter((_, idx) => idx < 4);
-// };
 
 export const dataGroupByStage = (arr) => {
   var group = groupBy(arr, "stage");
