@@ -11,17 +11,17 @@ import {
   CardContent,
 } from "@material-ui/core";
 import Skeleton from "@material-ui/lab/Skeleton";
+import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
-import { red, blue, green } from "@material-ui/core/colors";
+import { red, blue } from "@material-ui/core/colors";
 import Detail from "./profileDetail";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import { upperCase, camelCase } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
     background: "transparent",
-    marginTop: "15px",
     borderRadius: "0",
     boxShadow: "none",
   },
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "3px",
   },
   whitecolor: {
-    color: "#fff",
+    color: "#4b4b4b",
     width: "30px",
     height: "30px",
     margin: "4px 4px -10px",
@@ -47,13 +47,13 @@ const useStyles = makeStyles((theme) => ({
   containertitle: {
     color: "#3C4858",
     fontWeight: "400",
-    marginLeft: "20px",
+    marginLeft: "10px",
   },
   avatar: {
     backgroundColor: red[500],
   },
   sidecard: {
-    borderRadius: "0",
+    borderRadius: "5px",
     marginBottom: "5px",
   },
   cardContent: {
@@ -72,18 +72,22 @@ const useStyles = makeStyles((theme) => ({
 const RecentActivities = (props) => {
   const classes = useStyles();
 
-  const recentNotification = {
-    background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
-    boxShadow:
-      "0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(156, 39, 176,.4)",
-    width: "100%",
-  };
+  // const recentNotification = {
+  //   background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
+  //   boxShadow:
+  //     "0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(156, 39, 176,.4)",
+  //   width: "100%",
+  // };
 
   const appendData = (recentModifiedKPA) => {
     return recentModifiedKPA.map((recentKPA, index) => {
       return (
         <Grid item xs={12} sm={6} lg={12} key={index}>
-          <Card className={classes.sidecard} width="100%">
+          <Card
+            className={classes.sidecard}
+            style={{ borderLeft: `4px solid ${recentKPA.color.main}` }}
+            width="100%"
+          >
             <CardHeader
               pb={2}
               avatar={
@@ -97,11 +101,7 @@ const RecentActivities = (props) => {
               subheader={new Date(recentKPA.modified_on).toLocaleDateString()}
             />
             <CardContent className={classes.cardContent}>
-              <Typography
-                variant="overline"
-                display="block"
-                fontWeight="fontWeightLight"
-              >
+              <Typography variant="overline" display="block">
                 {upperCase(camelCase(recentKPA.type))}
               </Typography>
               <Typography className={classes.sidebarTitle} gutterBottom>
@@ -166,14 +166,13 @@ const RecentActivities = (props) => {
     <React.Fragment>
       <Grid container item xs={12}>
         <Box className={classes.wholeContainer} style={{ width: "100%" }}>
-          <Box>
-            <Box component="div" display="inline" className={classes.topbox}>
-              <NotificationsActiveIcon className={classes.whitecolor} />
-            </Box>
+          <Box p={2}>
+            <NotificationsActiveIcon className={classes.whitecolor} />
             <Typography className={classes.containertitle} display="inline">
               Notifications
             </Typography>
           </Box>
+          <Divider />
           <Paper className={classes.paper}>{getDetails()}</Paper>
         </Box>
       </Grid>

@@ -4,9 +4,9 @@ import BarChart from "@material-ui/icons/BarChart";
 import PieChartIcon from "@material-ui/icons/PieChart";
 import TimelineIcon from "@material-ui/icons/Timeline";
 import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
-import { blue } from "@material-ui/core/colors";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import { startCase, camelCase } from "lodash";
@@ -14,22 +14,18 @@ import Select from "@material-ui/core/Select";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(1, 2, 1),
     background: "transparent",
     marginTop: "0",
     borderRadius: "0",
     boxShadow: "none",
-    height: "200px",
-  },
-  topbox: {
-    marginLeft: "15px",
-    marginTop: "0",
-    padding: "20px",
-    background: blue.A400,
-    borderRadius: "3px",
+    height: "230px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
   },
   whitecolor: {
-    color: "#fff",
+    color: "#4b4b4b",
     width: "30px",
     height: "30px",
     margin: "4px 4px -10px",
@@ -41,16 +37,30 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "3px",
   },
   containertitle: {
-    color: "#3C4858",
-    fontWeight: "400",
-    marginLeft: "10px",
+    // color: "#3C4858",
+    // fontWeight: "400",
+    // marginLeft: "10px",
+    fontSize: "18px",
+    fontWeight: "500",
+    color: "#4b4b4b",
   },
   formControl: {
     minWidth: 100,
   },
+  legend: {
+    borderRadius: "50%",
+    width: "14px",
+    height: "14px",
+    overflow: "hidden",
+    display: "inline-block",
+    marginRight: "4px",
+  },
 }));
 
 const CustomPlaceholder = (props) => {
+  const COLOR = props.color.color;
+
+  // console.log(COLOR);
   const classes = useStyles();
   const getIconLogo = () => {
     switch (props.id) {
@@ -66,18 +76,36 @@ const CustomPlaceholder = (props) => {
   };
   return (
     <Box className={classes.wholeContainer}>
-      <Box>
-        <Box component="div" display="inline" className={classes.topbox}>
+      <Box p={1}>
+        <Box component="span" display="inline">
           {getIconLogo()}
         </Box>
         <Typography className={classes.containertitle} display="inline">
           {props.label}
-        </Typography>       
+        </Typography>
       </Box>
+      <Divider />
       <Paper className={classes.paper}>
-      
         {props.id === "bar" && (
-          <Box display="flex" justifyContent="flex-end">
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <div>
+              <Box
+                bgcolor={COLOR.primaryColor}
+                className={classes.legend}
+              ></Box>
+              <span style={{ fontSize: "12px", marginRight: "14px" }}>
+                Completed
+              </span>
+              <Box
+                bgcolor={COLOR.secondaryColor}
+                className={classes.legend}
+              ></Box>
+              <span style={{ fontSize: "12px" }}>Pending</span>
+            </div>
             <FormControl className={classes.formControl}>
               <Select
                 id="show-by-type"
@@ -94,10 +122,6 @@ const CustomPlaceholder = (props) => {
             </FormControl>
           </Box>
         )}
-        
-        {/* <Typography color="textSecondary">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a posuere turpis.
-                </Typography> */}
         {props.children}
       </Paper>
     </Box>
@@ -105,3 +129,6 @@ const CustomPlaceholder = (props) => {
 };
 
 export default CustomPlaceholder;
+CustomPlaceholder.defaultProps = {
+  color: { color: { primaryColor: "", secondaryColor: "" } },
+};

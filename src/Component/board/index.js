@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import { Box, Button } from "@material-ui/core";
 // import { CSVLink } from "react-csv";
 import { startCase, camelCase } from "lodash";
@@ -10,7 +11,6 @@ import { FilterBYType, FilterByName } from "../../Shared/function";
 import RowList from "./rowList";
 import SnackBar from "../../Shared/component/snackBar";
 import LibraryAddIcon from "@material-ui/icons/LibraryAdd";
-import { useHistory } from "react-router-dom";
 // import TitleHeaders from "./titleBoard";
 import { FormLabel, Typography } from "@material-ui/core";
 import { fetchUsersWithKpa } from "../../service/apiService";
@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Dashboard = (props) => {
-  const { location } = props;
+  let history = useHistory();
+  let location = useLocation();
   const queryParam = queryString.parse(location.search);
   const [showBy, setshowBy] = useState({ type: "" });
   const [data, setData] = useState({ profile: [], kpaCreation: [] });
@@ -45,10 +46,12 @@ const Dashboard = (props) => {
     setshowBy({
       [name]: event.target.value,
     });
-    props.history.push({
-        pathname: "/kpa-profile",
-        search: `?${"type"}=${queryParam["type"]}&&${"value"}=${event.target.value}`
-      });
+    history.push({
+      pathname: "/kpa-profile",
+      search: `?${"type"}=${queryParam["type"]}&&${"value"}=${
+        event.target.value
+      }`,
+    });
   };
 
   async function changeStage(result) {
@@ -138,7 +141,10 @@ const Dashboard = (props) => {
     console.log(arg);
     const id = isEmpty(titleKpa) ? "" : titleKpa.id;
     try {
-      const res = await Axios.post(`https://kpa-backend.herokuapp.com/kpa/${id}`, arg);
+      const res = await Axios.post(
+        `https://kpa-backend.herokuapp.com/kpa/${id}`,
+        arg
+      );
       setOpen(false);
       fetchData();
       snackBarRef.current.handleClick(
@@ -198,13 +204,13 @@ const Dashboard = (props) => {
         // bgcolor="background.paper"
       >
         <Typography variant="h6" component="h6">
-          {isEmpty(titleKpa) ? "" : startCase(camelCase(titleKpa.value))} KPA Board
+          {isEmpty(titleKpa) ? "" : startCase(camelCase(titleKpa.value))} KPA
+          Board
         </Typography>
         <div>
           {queryParam["type"] === "name" && (
             <Button
               variant="outlined"
-              color="primary"
               style={{ marginRight: "15px" }}
               onClick={() => setOpen(true)}
               endIcon={<LibraryAddIcon />}

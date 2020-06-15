@@ -164,13 +164,15 @@ const KpaForm = (props) => {
             >
               Submit
             </Button>
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={props.handleDelete}
-            >
-              Delete
-            </Button>
+            {props.stage && (
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={props.handleDelete}
+              >
+                Delete
+              </Button>
+            )}
             <Button
               variant="contained"
               color="secondary"

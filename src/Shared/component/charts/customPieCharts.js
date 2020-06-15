@@ -1,5 +1,12 @@
 import React from "react";
-import { PieChart, Pie, ResponsiveContainer, Tooltip, Cell } from "recharts";
+import {
+  PieChart,
+  Pie,
+  ResponsiveContainer,
+  Tooltip,
+  Cell,
+  Legend,
+} from "recharts";
 import { startCase, camelCase } from "lodash";
 
 // const COLORS1 = ["#1976d2", "#f44336", "#ff9800", "#4caf50"];
@@ -48,7 +55,11 @@ export const CustomPieCharts = ({ data }) => {
   const [data01, data02] = data;
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <PieChart>
+      <PieChart
+        margin={{
+          top: 20,
+        }}
+      >
         <Pie
           data={data01}
           dataKey="value"
@@ -61,19 +72,19 @@ export const CustomPieCharts = ({ data }) => {
               <Cell key={`cell-${index}`} fill={DATACOLORS[entry.name].dark} />
             ))}
         </Pie>
-        {/* <Legend
-          wrapperStyle={{ fontSize: "12px" }}
+        <Legend
+          wrapperStyle={{ fontSize: "11px", top: "0" }}
           payload={
             data01 &&
             data01.map((el) => {
               return {
                 id: el.name,
-                value: el.name,
+                value: startCase(camelCase(el.name)),
                 color: DATACOLORS[el.name].main,
               };
             })
           }
-        /> */}
+        />
         <Pie
           data={data02}
           paddingAngle={5}

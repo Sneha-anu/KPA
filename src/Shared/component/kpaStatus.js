@@ -2,7 +2,8 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 
 import Rating from "@material-ui/lab/Rating";
-import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+// import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
 import Tooltip from "@material-ui/core/Tooltip";
 
 const CompletedRating = withStyles({
@@ -33,7 +34,7 @@ const CustomKpaStatus = ({ completed, pending, target }) => {
             value={completed}
             max={completed}
             readOnly
-            icon={<AssignmentTurnedInIcon fontSize="inherit" />}
+            icon={<CheckCircleIcon fontSize="inherit" />}
           />
         </div>
       </Tooltip>
@@ -45,7 +46,7 @@ const CustomKpaStatus = ({ completed, pending, target }) => {
             defaultValue={pending}
             readOnly
             max={pending}
-            icon={<AssignmentTurnedInIcon fontSize="inherit" />}
+            icon={<CheckCircleIcon fontSize="inherit" />}
           />
         </div>
       </Tooltip>
@@ -55,7 +56,7 @@ const CustomKpaStatus = ({ completed, pending, target }) => {
             name="target-color"
             max={target - completed - pending}
             readOnly
-            icon={<AssignmentTurnedInIcon fontSize="inherit" />}
+            icon={<CheckCircleIcon fontSize="inherit" />}
           />
         </div>
       </Tooltip>

@@ -2,6 +2,12 @@ import { groupBy, countBy, orderBy, partition, find, sumBy } from "lodash";
 // import { kpaModel } from "../function/initialData";
 
 export const getGroupingKpa = (arr) => {
+  const DATACOLORS = {
+    component: { main: "#1976d2", dark: "#115293", light: "#4791db" },
+    Tech_session: { dark: "#d32f2f", main: "#f44336", light: "#e57373" },
+    Master_class: { dark: "#ffd600", main: "#ffea00", light: "#ffff00" },
+    case_study: { dark: "#388e3c", main: "#4caf50", light: "#81c784" },
+  };
   return arr
     .map((el) => {
       return el.kpa.map((item) => {
@@ -10,11 +16,14 @@ export const getGroupingKpa = (arr) => {
           id: el.empId,
           name: el.name,
           designation: el.designation,
-          target: el.target_kpa
+          target: el.target_kpa,
         }; //   /Object.assign({}, item, { id: el.id })
       });
     })
-    .flat(Infinity);
+    .flat(Infinity)
+    .map((e) => {
+      return { ...e, color: DATACOLORS[e.type] };
+    });
 };
 
 export const pieChartsData = (arr, type, kpa = []) => {
@@ -163,7 +172,13 @@ export const barGraphData = (arr, type, kpa = []) => {
   if (arr.length === 0 || type === "") {
     return [];
   }
-  
+  const DATACOLORS = {
+    component: { main: "#1976d2", dark: "#115293", light: "#4791db" },
+    Tech_session: { dark: "#d32f2f", main: "#f44336", light: "#e57373" },
+    Master_class: { dark: "#ffd600", main: "#ffea00", light: "#ffff00" },
+    case_study: { dark: "#388e3c", main: "#4caf50", light: "#81c784" },
+  };
+
   var filteredArr = getGroupingKpa(arr).filter((el) => el.type === type);
 
   var groupArr = groupBy(filteredArr, "name");
@@ -192,7 +207,15 @@ export const barGraphData = (arr, type, kpa = []) => {
     };
   });
 
-  return orderBy(res, ["completed"], ["desc"]).filter((_, idx) => idx < 4);
+  return [
+    orderBy(res, ["completed"], ["desc"]).filter((_, idx) => idx < 4),
+    {
+      color: {
+        primaryColor: DATACOLORS[type].dark,
+        secondaryColor: DATACOLORS[type].light,
+      },
+    },
+  ];
 };
 
 export const dataGroupByStage = (arr) => {
@@ -322,6 +345,9 @@ export const getRecentKPAModification = (arr) => {
   var date = new Date();
   date.setDate(date.getDate() - 30);
   filteredArr = orderBy(filteredArr, ["modified_on"], ["desc"]);
+  console.log(
+    filteredArr.filter((el) => new Date(el.modified_on) >= date).slice(0, 4)
+  );
   return filteredArr
     .filter((el) => new Date(el.modified_on) >= date)
     .slice(0, 4);

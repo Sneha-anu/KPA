@@ -14,8 +14,9 @@ export const Column = ({ task }) => {
   };
   return (
     <Droppable droppableId={task.id}>
-      {provided => (
+      {(provided) => (
         <div
+          style={{ margin: "5px 10px" }}
           {...provided.droppableProps}
           ref={provided.innerRef}
         >

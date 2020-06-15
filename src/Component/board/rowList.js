@@ -12,35 +12,36 @@ const styless = (theme) => ({
     flexGrow: 1,
   },
   background: {
-    padding: theme.spacing(1),
+    borderRadius: "8px",
+    // padding: theme.spacing(1),
     borderRight: "22px solid white",
     background: theme.palette.divider,
   },
   stage2: {
-      background: '#ffa726',    
-      padding: '10px 20px',
-      marginLeft: '-28px',
-      marginTop: '0',
-      marginBottom: '10px',
-      position: 'relative',
-      width: '70%', 
-      boxShadow: '1px 1px 3px #ffa726',
-      borderRadius: '4px 4px 4px 0',
+    background: "#00b5ad",
+    // padding: "10px 20px",
+    // marginLeft: "-28px",
+    // marginTop: "0",
+    // marginBottom: "10px",
+    // position: "relative",
+    // width: "70%",
+    // boxShadow: "1px 1px 3px #00b5ad",
+    // borderRadius: "4px 4px 4px 0",
   },
   title: {
     color: "#fff",
     fontSize: "16px",
   },
   arrow: {
-    width: '0',
-    height: '0',
-    lineHeight: '0',
-    borderLeft: '20px solid transparent',
-    borderTop: '10px solid #ffa726',
-    top: '104%',
-    left: '0',
-    position: 'absolute',
-  }
+    width: "0",
+    height: "0",
+    lineHeight: "0",
+    borderLeft: "20px solid transparent",
+    borderTop: "10px solid #00b5ad",
+    top: "104%",
+    left: "0",
+    position: "absolute",
+  },
 });
 
 class RowList extends React.Component {
@@ -79,9 +80,16 @@ class RowList extends React.Component {
                     key={columnId + data[columnId]["title"]}
                     className={classes.background}
                   >
-                    <Box component="h1" p={2} className={classes.stage2}>
+                    <Box
+                      component="div"
+                      p={1.5}
+                      mb={1}
+                      style={{ opacity: "0.85", borderRadius: "5px 5px 0 0" }}
+                      bgcolor="text.primary"
+                    >
                       <Typography className={classes.title}>
-                        {data[columnId]["title"]} <span className={classes.arrow}></span>
+                        {data[columnId]["title"]}
+                        <span className={classes.arrow}></span>
                       </Typography>
                     </Box>
                     <Column task={data[columnId]} index={index} />

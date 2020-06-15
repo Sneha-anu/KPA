@@ -1,0 +1,13 @@
+<svg id="KPA_Logl" data-name="KPA Logl" xmlns="http://www.w3.org/2000/svg" width="135.458" height="30.957" viewBox="0 0 135.458 30.957">
+  <g id="Logo">
+    <path id="Path_1951" data-name="Path 1951" d="M155.052,773.222l-2.25,3.494a10.367,10.367,0,1,1-5.605-6.035l1.926-2.991a13.807,13.807,0,0,0-5.106-1.368V765.4h.8a1.114,1.114,0,0,0,1.114-1.113v-.07a1.114,1.114,0,0,0-1.114-1.114h-3.758a1.114,1.114,0,0,0-1.114,1.114v.07a1.113,1.113,0,0,0,1.114,1.113h.7v.945a13.889,13.889,0,1,0,13.3,6.879Z" transform="translate(-129.141 -763.101)" fill="#fff"/>
+    <text id="KPA" transform="translate(30.259 23.117)" fill="#fff" font-size="22" font-family="Roboto-Medium, Roboto" font-weight="500" letter-spacing="-0.05em"><tspan x="0" y="0">KPA</tspan></text>
+    <text id="Tracker" transform="translate(68.458 22.423)" fill="#fff" font-size="22" font-family="Roboto-Regular, Roboto" letter-spacing="-0.05em"><tspan x="0" y="0">Tracker</tspan></text>
+    <g id="Group_2002" data-name="Group 2002" transform="translate(-139.721 -1262.685)">
+      <g id="Group_2002-2" data-name="Group 2002" transform="translate(148.645 1274.633)">
+        <path id="Path_1986" data-name="Path 1986" d="M153.391,1286.68c.159-.174.309-.38.309-.38l.731-1.124-2.1-3.3a2,2,0,0,0-2.76-.606h0a2,2,0,0,0-.606,2.76l1.673,2.64A2.166,2.166,0,0,0,153.391,1286.68Z" transform="translate(-148.646 -1280.951)" fill="#eeb40c"/>
+      </g>
+      <path id="Path_1987" data-name="Path 1987" d="M152.98,1280.348a2.166,2.166,0,0,0,2.758.015c.159-.174.309-.38.309-.38l6.3-9.81a2,2,0,0,1,2.77-.557h0a2,2,0,0,1,.558,2.77l-7.221,11.227a2,2,0,0,1-2.77.557h0a2.8,2.8,0,0,1-.8-.9l-1.9-2.92" transform="translate(-2.346 0)" fill="#eeb40c"/>
+    </g>
+  </g>
+</svg>

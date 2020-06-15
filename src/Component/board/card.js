@@ -15,7 +15,7 @@ import KpaForm from "../forms/kpaForms";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: 10,
-    borderLeft: `4px solid ${theme.palette.success.main}`,
+    borderLeft: (props) => `4px solid ${props.color.main}`,
   },
   paper: {
     padding: theme.spacing(1),
@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const NotifyCard = (props) => {
-  const classes = useStyles();
-  const { title, description, modified_on, type } = props;
+  const classes = useStyles(props);
+  const { title, description, modified_on, type, color } = props;
   const [open, setOpen] = useState(false);
 
   const profileSubmit = async (arg) => {

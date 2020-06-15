@@ -16,11 +16,13 @@ export const CustomLineCharts = ({ data }) => {
       <LineChart
         //   className="card"
         //   width={500}
-        //   height={300}
+        // height={190}
         data={data}
         margin={{
+          top: 20,
           right: 10,
-          bottom: 0,
+          left: 5,
+          bottom: 5,
         }}
       >
         {/* <CartesianGrid strokeDasharray="3 3" /> */}
@@ -37,18 +39,18 @@ export const CustomLineCharts = ({ data }) => {
           ]}
         />
         <Legend
-          wrapperStyle={{ fontSize: "12px", top: "1px" }}
+          wrapperStyle={{ fontSize: "11px", top: "1px" }}
           formatter={(value) => startCase(camelCase(value))}
         />
         <Line
           type="monotone"
           dataKey="component"
-          stroke="#8884d8"
+          stroke="#115293"
           activeDot={{ r: 8 }}
         />
-        <Line type="monotone" dataKey="Tech_session" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="Tech_session" stroke="red" />
         <Line type="monotone" dataKey="Master_class" stroke="#FFC533" />
-        <Line type="monotone" dataKey="case_study" stroke="red" />
+        <Line type="monotone" dataKey="case_study" stroke="#82ca9d" />
       </LineChart>
     </ResponsiveContainer>
   );

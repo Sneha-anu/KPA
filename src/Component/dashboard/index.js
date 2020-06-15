@@ -72,7 +72,7 @@ export default function Dashboard() {
       return { ...state, showBy: event.target.value };
     });
   };
-  console.log(options);
+  // console.log(props);
   return (
     <Container className={classes.root}>
       <Grid container spacing={3}>
@@ -81,6 +81,9 @@ export default function Dashboard() {
             id="bar"
             label="Break Down"
             {...options}
+            color={
+              barGraphData(data.profile, options.showBy, data.kpaCreation)[1]
+            }
             handleChange={handleChange}
           >
             <BarCustomChart

@@ -15,18 +15,19 @@ import {
   TableContainer,
   Button,
 } from "@material-ui/core";
-import LibraryAddIcon from "@material-ui/icons/LibraryAdd";
+// import LibraryAddIcon from "@material-ui/icons/LibraryAdd";
 import Skeleton from "@material-ui/lab/Skeleton";
 import { red, blue } from "@material-ui/core/colors";
 import Assignment from "@material-ui/icons/Assignment";
+import Divider from "@material-ui/core/Divider";
 import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
 import CustomModel from "../../Shared/component/customModel";
 import AddProfile from "../forms/addProfile";
+
 const useStyles = makeStyles((theme) => ({
   paper: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(1, 3),
     background: "transparent",
-    marginTop: "15px",
     borderRadius: "0",
     boxShadow: "none",
   },
@@ -38,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "3px",
   },
   whitecolor: {
-    color: "#fff",
+    color: "#4b4b4b",
     width: "30px",
     height: "30px",
     margin: "4px 4px -10px",
@@ -52,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
   containertitle: {
     color: "#3C4858",
     fontWeight: "400",
-    marginLeft: "20px",
   },
   avatar: {
     backgroundColor: blue.A400,
@@ -73,6 +73,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "5px",
     marginRight: "5px",
   },
+  smallIcon: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
+  },
 }));
 
 const Profile = (props) => {
@@ -92,8 +96,11 @@ const Profile = (props) => {
 
   const getAvatarname = (fullName) => {
     const arrayOfName = fullName.split(" ");
-    return (arrayOfName[0].split("")[0] + arrayOfName[arrayOfName.length -1].split("")[0]);
-  }
+    return (
+      arrayOfName[0].split("")[0] +
+      arrayOfName[arrayOfName.length - 1].split("")[0]
+    );
+  };
 
   const renderList = () => {
     // const data = props.data;
@@ -131,8 +138,10 @@ const Profile = (props) => {
             <TableCell component="th" scope="row">
               <Box display="flex" alignItems="center" flexDirection="row">
                 <Box>
-                  <Avatar className={classes.avatar}>{getAvatarname(profile.name)}</Avatar>
-                {/*  <Avatar
+                  <Avatar className={classes.avatar}>
+                    {getAvatarname(profile.name)}
+                  </Avatar>
+                  {/*  <Avatar
                     alt={profile.name}
                     src={"/images/" + profile.name + ".jpg"}
                 /> */}
@@ -160,6 +169,7 @@ const Profile = (props) => {
                   link={false}
                 />
               )}
+              {isEmpty(projectDetails) && <h4>Currently in Bench</h4>}
             </TableCell>
             <TableCell>
               <CloudDownloadIcon
@@ -175,28 +185,33 @@ const Profile = (props) => {
 
   return (
     <React.Fragment>
-      <Box className={classes.wholeContainer}>
-        <Box display="flex" justifyContent="space-between">
+      <Box p={1} className={classes.wholeContainer}>
+        <Box display="flex" p={1} justifyContent="space-between">
           <div>
-            <Box component="div" display="inline" className={classes.topbox}>
-              <Assignment className={classes.whitecolor} />
-            </Box>
+            <Assignment className={classes.whitecolor} />
             <Typography className={classes.containertitle} display="inline">
               Employee Details
             </Typography>
           </div>
-
           <div>
             <Button
-              variant="outlinedPrimary"
+              variant="outlined"
+              color={"#ffffff"}
               className={classes.addEmpBtn}
               onClick={() => setOpen(true)}
-              endIcon={<LibraryAddIcon />}
+              startIcon={
+                <Avatar
+                  alt="Add"
+                  className={classes.smallIcon}
+                  src="/AddEmployee.svg"
+                />
+              }
             >
               Add Employee
             </Button>
           </div>
         </Box>
+        <Divider />
         <Paper className={classes.paper}>
           <TableContainer>
             <Table className={classes.table} aria-label="Employee Details">
